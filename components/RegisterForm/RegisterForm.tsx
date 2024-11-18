@@ -100,6 +100,7 @@ const router = useRouter(); // // Instancia el hook de enrutamiento para redirig
             address: validateAddress(data.address),
             phone: validatePhone(data.phone)
         });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]); // Se ejecuta cada vez que cambia el estado de los datos del formulario
 
     return (

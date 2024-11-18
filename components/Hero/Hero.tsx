@@ -10,7 +10,7 @@ const Hero = () => {
             
             <div className="relative z-10 text-center px-4">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                    Welcome to Miguel's Market!
+                    Welcome to Miguel&apos;s Market!
                 </h1>
                 <p className="text-xl md:text-2xl mb-8">
                     Discover the best products at amazing prices. Find your next favorite item today!

@@ -16,7 +16,7 @@ const AuthProtected = ({ children }: { children: React.ReactNode}) => {
         if (!user) {
             router.push('/login'); // Redirige al login si el usuario no está autenticado
         }
-    }, []);
+    }, [router, user]);
 
     return <>{children}</>; // Si el usuario está autenticado, se renderiza el contenido
 };

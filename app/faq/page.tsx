@@ -20,7 +20,7 @@ const FAQ = () => {
                     <div>
                         <h3 className="text-2xl font-semibold text-gray-800">What is your return policy?</h3>
                         <p className="text-lg text-gray-600">
-                            We offer a 30-day return policy on most items. If you're not satisfied with your purchase, simply return it within 30 days for a full refund or exchange.
+                            We offer a 30-day return policy on most items. If you&apos;re not satisfied with your purchase, simply return it within 30 days for a full refund or exchange.
                         </p>
                     </div>
                     <div>
