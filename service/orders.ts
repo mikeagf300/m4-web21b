@@ -1,6 +1,6 @@
 import { Cart } from "@/contexts/cartContext";
 
-const apiUrl = process.env.API_URL || "http://localhost:3001";
+const apiUrl = process.env.API_URL;
 
 // Función para crear una nueva orden, recibe el ID del usuario, el token y el carrito de compras
 export const postOrders = async (userId: number, token: string,  cart: Cart []) => {

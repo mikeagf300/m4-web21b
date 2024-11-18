@@ -3,13 +3,13 @@ import { productsMock } from "@/app/mocks/products";
 
 // Usar productos mock si está habilitado, o la URL de la API si no
 const ffProductsMock = process.env.FF_PRODUCTS_MOCK || false;
-const apiUrl = process.env.API_URL || "http://localhost:3001";
+const apiUrl = process.env.API_URL;
 
 // Función para obtener todos los productos desde la API
 export const getProducts = async (): Promise<Product[]> => {
     try {
         const res = await fetch(apiUrl + "/products", {
-            cache: "no-store", // No almacenar en caché para obtener datos actualizados
+            next: { revalidate: 60 }, // Revalida cada 60 segundos
         });
 
         // Verificar si la respuesta es válida y contiene un array
