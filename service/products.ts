@@ -3,7 +3,7 @@ import { productsMock } from "@/app/mocks/products";
 
 // Usar productos mock si está habilitado, o la URL de la API si no
 const ffProductsMock = process.env.FF_PRODUCTS_MOCK || false;
-const apiUrl = `${process.env.API_URL}/products`;
+const apiUrl = `${process.env.API_URL}`;
 
 // Función para obtener todos los productos desde la API
 export const getProducts = async (): Promise<Product[]> => {
