@@ -1,25 +1,26 @@
+// app/page.tsx
+
+import { Product } from "@/app/interfaces";
+import { getFeaturedProducts } from "@/service/products";
 import Card from "@/components/Card/Card";
 import CardList from "@/components/CardList/CardList";
 import Hero from "../components/Hero/Hero";
-import { getFeaturedProducts } from "@/service/products";
 
-// Página principal para mostrar los productos destacados
-const page = async () => {
-  // Llamada al servicio para obtener los productos destacados
-  const products = await getFeaturedProducts();
+// Componente de servidor
+const Page = async () => {
+  const products: Product[] = await getFeaturedProducts(); // Obtener los productos destacados
 
   return (
     <>
-      <Hero/>
-      {/* Lista de tarjetas de productos */}
+      <Hero />
       <CardList>
-         {/* Mapeamos los productos obtenidos y generamos una tarjeta por cada uno */}
-      {products.map((product, i) => (
-        <Card key={i} {...product} variant="secondary"/>  
-      ))}
+        {products.map((product, i) => (
+          <Card key={i} {...product} variant="secondary" />
+        ))}
       </CardList>
     </>
   );
-}
+};
 
-export default page;
+export default Page;
+
